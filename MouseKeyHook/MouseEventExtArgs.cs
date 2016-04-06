@@ -114,6 +114,10 @@ namespace Gma.System.MouseKeyHook
 
             switch ((long) wParam)
             {
+                case Messages.WM_POINTERDOWN:
+                    break;
+                case Messages.WM_POINTERUP:
+                    break;
                 case Messages.WM_LBUTTONDOWN:
                     isMouseButtonDown = true;
                     button = MouseButtons.Left;

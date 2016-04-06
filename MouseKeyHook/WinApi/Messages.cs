@@ -119,5 +119,22 @@ namespace Gma.System.MouseKeyHook.WinApi
         ///     these two contexts by checking the context code in the lParam parameter.
         /// </summary>
         public const int WM_SYSKEYUP = 0x105;
+
+        /// <summary>
+        /// Posted when a pointer makes contact over the client area of a window. This input message
+        /// targets the window over which the pointer makes contact, and the pointer is implicitly
+        /// captured to the window so that the window continues to receive input for the pointer
+        /// until it breaks contact.
+        /// </summary>
+        public const int WM_POINTERDOWN = 0x0246;
+
+        /// <summary>
+        /// Posted when a pointer that made contact over the client area of a window breaks contact.
+        /// This input message targets the window over which the pointer makes contact and the
+        /// pointer is, at that point, implicitly captured to the window so that the window continues
+        /// to receive input messages including the WM_POINTERUP notification for the pointer until
+        /// it breaks contact.
+        /// </summary>
+        public const int WM_POINTERUP = 0x0247;
     }
 }
